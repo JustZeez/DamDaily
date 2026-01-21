@@ -6,57 +6,60 @@ export default function Subscription() {
 
   const plans = [
     {
-      id: 'free',
-      name: 'Free',
+      id: 'explorer',
+      name: 'Explorer',
       price: '$0',
       period: 'forever',
       description: 'Basic news access',
       features: [
-        'Access to general news',
-        'Limited articles per day',
+        'Basic global news access',
         'Basic search functionality',
-        'Email notifications',
-        'Community support'
+        'Community view only',
+        'Standard news updates',
+        'Email newsletter'
       ],
       buttonText: 'Current Plan',
       buttonColor: 'bg-gray-300 text-gray-700',
       popular: false
     },
     {
-      id: 'premium',
-      name: 'Premium',
-      price: '$10.00',
+      id: 'insider',
+      name: 'Insider',
+      price: '$9.99',
       period: 'per month',
       description: 'Most popular choice',
       features: [
-        'Unlimited news access',
+        'All Explorer features',  
         'All categories unlocked',
-        'Advanced search filters',
+        'Insider badge & recognition',
         'Ad-free experience',
         'Priority email support',
-        'Offline reading',
-        'Early access to features'
+        'Anonymous & Confession corner',
+        'Brand Spotlight advertising',
       ],
-      buttonText: 'Upgrade to Premium',
+      buttonText: 'Upgrade to Insider',
       buttonColor: 'bg-green-600 hover:bg-green-700 text-white',
       popular: true
     },
     {
-      id: 'pro',
-      name: 'Pro',
-      price: '$24.99',
+      id: 'visionary',
+      name: 'Visionary',
+      price: '$49.99',
       period: 'per month',
       description: 'For power users',
       features: [
-        'Everything in Premium',
-        'Custom news feeds',
-        'API access',
-        'Dedicated support',
-        'Analytics dashboard',
-        'Team collaboration',
-        'White-label options'
+        'All Insider features',
+        'Professional Networking Hub',
+        'API access for developers',
+        'Visionary badge & recognition',
+        'Ad-free experience',
+        '24/7 priority support',
+        'Verified Author Publishing',
+        'Aspiring Writers Circle',
+        'Brand Spotlight advertising',
+        'Anonymous & Confession corner',
       ],
-      buttonText: 'Choose Pro',
+      buttonText: 'Choose Visonary',
       buttonColor: 'bg-blue-600 hover:bg-blue-700 text-white',
       popular: false
     }

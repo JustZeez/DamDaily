@@ -17,6 +17,9 @@ const forgotPassword = async (email) => {
 const resetPassword = async (token, newPassword) => {
     return await axios.post(`${api}/auth/reset-password`, {token, newPassword})
 }
+const resendOtp =  async (email) =>  {
+    return await axios.post(`${api}/auth/resend-otp`, {email})
+}
 const getNews = async (category = 'all', token) => {
     return await axios.get(`${api}/news/${category}`,
         {
@@ -36,7 +39,7 @@ const getCategoryStats = async (token) => {
     )
 }
 const getUserProfile = async (token) => {
-    return await axios.put(`${api}/user/profile`,
+    return await axios.get(`${api}/user/profile`,
         {
             headers: {
                 Authorization: `Bearer ${token}`
@@ -81,17 +84,22 @@ const getMyFullProfile = async (token) => {
         }
     )
 }
+const sendContactMessage = async (messageData) => {
+    return await axios.post(`${api}/contact/send-message`, messageData)
+}
 export {
     registerUser,
     verifyOtp, 
     loginUser , 
     forgotPassword, 
     resetPassword, 
+    resendOtp,
     getNews, 
     getCategoryStats,
     getUserProfile,
     updateUserProfile,
     uploadProfileImage,
     deactivateUserAccount,
-    getMyFullProfile
+    getMyFullProfile,
+    sendContactMessage
 }

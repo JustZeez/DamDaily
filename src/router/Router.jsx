@@ -19,6 +19,7 @@ import News from '../pages/News'
 import Categories from '../pages/Categories'
 import Subscription from '../pages/Subscription'
 import Me from '../pages/Me'
+import ProtectedRoute from '../components/ProtectedRoute'
 
 
 
@@ -39,13 +40,15 @@ export default function Router() {
             <Route path='/resetpassword' element={<ResetPassword/>}/>
             <Route path='/verify' element={<Verify/>}/>
             <Route path='/resendotp' element={<ResendOtp/>}/>
+            <Route path='/subscription' element={<Subscription/>}/>
+            {/* Protected Routes........User must be logged in to access this */}
+            <Route element={<ProtectedRoute/>}>
             <Route path='/user' element={<UserProfile/>}/>
             <Route path='/changepassword' element={<ChangePassword/>}/>
             <Route path='/news' element={<News/>}/>
             <Route path='/categories' element={<Categories/>}/>
-            <Route path='/subscription' element={<Subscription/>}/>
             <Route path='/me' element={<Me/>}/>
-
+            </Route>
         </Routes>
         <Footer/>
         </BrowserRouter>
