@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-b border-green-500 pb-6">
           <div className="flex items-start space-x-3">
             <img
-              src="/src/assets/images/logo.png"
+              src="/images/logo.png"
               alt="DamDaily Logo"
               className="h-10 w-10 object-contain"
             />
