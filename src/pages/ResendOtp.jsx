@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { resendOtp } from "../data/api";
+import { useNavigate } from "react-router-dom";
 
 export default function ResendOtp() {
   const [email, setEmail] = useState(''); 
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,7 +23,7 @@ export default function ResendOtp() {
       
       toast.success("OTP resent successfully!");
       console.log("OTP resent successfully");
-      setEmail('');
+      navigate('/verify')
     } catch (error) {
       const message = error.response?.data?.message || "Failed to resend OTP.";
       toast.error(message);

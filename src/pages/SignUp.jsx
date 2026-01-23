@@ -214,7 +214,7 @@ export default function SignUp() {
           </button>
 
           <div className="text-sm text-center text-gray-600 italic">
-            An OTP will be sent to your email or phone after registration.
+            An OTP will be sent to your email after registration.
           </div>
 
           <div className="text-sm text-center text-gray-700">
