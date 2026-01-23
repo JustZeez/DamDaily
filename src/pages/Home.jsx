@@ -14,7 +14,7 @@ import {
   FaLockOpen,
   FaGem,
   FaInfinity,
-} from "react-icons/fa/index.js";
+} from "react-icons/fa";
 
 export default function Home() {
   const [activeReaders, setActiveReaders] = useState(0);
