@@ -27,7 +27,7 @@ export default function Header() {
          
           <Link to="/" className="flex items-center space-x-3 group">
             <img
-              src="/images/logo.png"
+              src="/images/DamDaily.png"
               alt="DamDaily"
               className="h-12 w-12 object-contain transition-transform group-hover:scale-105"
             />
